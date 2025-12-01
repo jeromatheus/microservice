@@ -1,0 +1,6 @@
+services:
+  productmicroservice:
+    image: ${DOCKER_REGISTRY-}productmicroservice
+    build:
+      context: .
+      dockerfile: ProductMicroservice/Dockerfile
