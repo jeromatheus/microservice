@@ -1,12 +1,68 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\ProductMicroservice\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60EDD4F7-F7D3-4831-A5F6-6D6D7485DD30}|..\\AuthMicroservice\\AuthMicroservice.csproj|c:\\users\\usuario\\desktop\\repos\\microservice\\authmicroservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60EDD4F7-F7D3-4831-A5F6-6D6D7485DD30}|..\\AuthMicroservice\\AuthMicroservice.csproj|c:\\users\\usuario\\desktop\\repos\\microservice\\authmicroservice\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D81A4EBA-9130-4574-AA36-2B2663E8095F}|..\\ApiGateway\\ApiGateway.csproj|c:\\users\\usuario\\desktop\\repos\\microservice\\apigateway\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\AuthMicroservice\\Program.cs",
+              "RelativeDocumentMoniker": "..\\AuthMicroservice\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\AuthMicroservice\\Program.cs",
+              "RelativeToolTip": "..\\AuthMicroservice\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvyAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T23:24:14.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ocelot.json",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\ApiGateway\\ocelot.json",
+              "RelativeDocumentMoniker": "..\\ApiGateway\\ocelot.json",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\ApiGateway\\ocelot.json",
+              "RelativeToolTip": "..\\ApiGateway\\ocelot.json",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-01T23:18:58.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\AuthMicroservice\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "..\\AuthMicroservice\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\repos\\Microservice\\AuthMicroservice\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "..\\AuthMicroservice\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-01T23:17:46.08Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

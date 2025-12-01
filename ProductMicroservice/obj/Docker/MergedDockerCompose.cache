@@ -1,0 +1,19 @@
+name: dockercompose11996596968430432284
+services:
+  productmicroservice:
+    build:
+      context: C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice
+      dockerfile: ProductMicroservice/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_HTTP_PORTS: "8080"
+    image: productmicroservice
+    networks:
+      default: null
+    ports:
+      - mode: ingress
+        target: 8080
+        protocol: tcp
+networks:
+  default:
+    name: dockercompose11996596968430432284_default

@@ -4,19 +4,37 @@
   },
   "Routes": [
     {
-      // 1. A DÓNDE VOY (Tu microservicio real)
+      // --- RUTA 1: AUTH (Pública - Puerto 5005) ---
+      "DownstreamPathTemplate": "/api/auth/login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost", // Si falla, cambia a "127.0.0.1"
+          "Port": 5005
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/auth/login",
+      "UpstreamHttpMethod": [ "POST" ]
+      // Sin AuthenticationOptions porque aquí entran para pedir el token
+    },
+    {
+      // --- RUTA 2: PRODUCTOS (Privada - Puerto 5008) ---
       "DownstreamPathTemplate": "/api/product",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
+          "Host": "localhost", // Si falla, cambia a "127.0.0.1"
           "Port": 5008
         }
       ],
-
-      // 2. CÓMO ME LLAMAN (La URL pública del Gateway)
       "UpstreamPathTemplate": "/gateway/products",
-      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+
+      // Esta ruta SÍ está protegida
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": []
+      }
     }
   ]
 }
