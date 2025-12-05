@@ -83,6 +83,14 @@ namespace ProductMicroservice.Controllers
             return NoContent(); // Retorna 204
         }
 
+        // GET api/product/catalog
+        [HttpGet("catalog")] 
+        public async Task<IActionResult> GetCatalog()
+        {
+            var catalog = await _productRepository.GetCatalog();
+            return Ok(catalog);
+        }
+
         /// <summary>
         /// Crea un producto dentro de una transacción atómica arantiza la integridad de los datos
         /// </summary>

@@ -34,7 +34,18 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// --- 2. CONFIGURACIÓN DE OCELOT ---
+// --- 2. CONFIGURACIÓN DE CORS ---
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // <--- La URL de tu React
+              .AllowAnyMethod()                     // GET, POST, PUT, DELETE
+              .AllowAnyHeader();                    // Authorization, Content-Type
+    });
+});
+
+// --- 3. CONFIGURACIÓN DE OCELOT ---
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot(builder.Configuration);
 
@@ -43,18 +54,21 @@ builder.Services.AddOcelot(builder.Configuration);
 
 var app = builder.Build();
 
-// --- 3. PIPELINE DE MIDDLEWARE (EL ORDEN ES VITAL) ---
+// --- 4. PIPELINE DE MIDDLEWARE (EL ORDEN ES VITAL) ---
 
 // A. (Opcional) Redirección HTTPS - Coméntalo si trabajas en localhost puerto 9000
 // app.UseHttpsRedirection(); 
 
-// B. AUTENTICACIÓN: Primero validamos el Token (¿Quién es?)
+// B. ACTIVAR EL MIDDLEWARE DE CORS: Debe ir ANTES de Auth y ANTES de Ocelot
+app.UseCors("AllowReactApp");
+
+// C. AUTENTICACIÓN: Primero validamos el Token (¿Quién es?)
 app.UseAuthentication();
 
-// C. AUTORIZACIÓN: Luego revisamos permisos (¿Puede pasar?)
+// D. AUTORIZACIÓN: Luego revisamos permisos (¿Puede pasar?)
 app.UseAuthorization();
 
-// D. OCELOT: Finalmente, si pasó los filtros anteriores, Ocelot redirige la petición
+// E. OCELOT: Finalmente, si pasó los filtros anteriores, Ocelot redirige la petición
 await app.UseOcelot();
 
 app.Run();

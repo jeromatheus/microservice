@@ -35,6 +35,20 @@
         "AuthenticationProviderKey": "Bearer",
         "AllowedScopes": []
       }
+    },
+    {
+      // --- RUTA 3: PARA CATÁLOGO
+      "DownstreamPathTemplate": "/api/product/catalog",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5008 // El puerto de tu ProductMicroservice
+        }
+      ],
+      "UpstreamPathTemplate": "/gateway/catalog",
+      "UpstreamHttpMethod": [ "GET", "OPTIONS" ]
+      // Nota: Sin AuthenticationOptions porque el catálogo suele ser público
     }
   ]
 }

@@ -1,4 +1,5 @@
-﻿using ProductMicroservice.Models;
+﻿using ProductMicroservice.DTOs;
+using ProductMicroservice.Models;
 
 namespace ProductMicroservice.Repository
 {
@@ -10,6 +11,8 @@ namespace ProductMicroservice.Repository
         Task InsertProduct(Product product);
         Task UpdateProduct(Product product);
         Task DeleteProduct(int id);
+        //Task InsertRange(List<Product> products);
+        Task<IEnumerable<CatalogProductDto>> GetCatalog();
         Task Save();
     }
 }

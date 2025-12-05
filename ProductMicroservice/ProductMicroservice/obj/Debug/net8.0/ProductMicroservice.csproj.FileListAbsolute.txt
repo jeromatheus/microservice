@@ -506,8 +506,6 @@ C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroserv
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.RazorAssemblyInfo.cache
-C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.RazorAssemblyInfo.cs
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\staticwebassets\msbuild.ProductMicroservice.Microsoft.AspNetCore.StaticWebAssets.props
@@ -522,3 +520,4 @@ C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroserv
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.pdb
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ref\ProductMicroservice.dll
+C:\Users\Usuario\Desktop\repos\Microservice\ProductMicroservice\ProductMicroservice\obj\Debug\net8.0\ProductMicroservice.sourcelink.json

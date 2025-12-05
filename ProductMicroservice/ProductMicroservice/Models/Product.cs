@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using ProductMicroservice.Models.Enums;
 
 namespace ProductMicroservice.Models
 {
@@ -13,8 +14,10 @@ namespace ProductMicroservice.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? Description { get; set; }
+        public string Name { get; set; } 
+        public ProductType Type { get; set; }
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
+        public List<ProductVariant> Variants { get; set; } = new List<ProductVariant>();
     }
 }

@@ -11,14 +11,20 @@ namespace ProductMicroservice.Models
     /// </remarks>
     public class ProductDbContext : DbContext
     {
-        /// <summary>
-        /// Representa la tabla "Products" en la base de datos.
-        /// </summary>
         /// <remarks>
         /// DbSet permite realizar consultas LINQ y operaciones CRUD (Create, Read, Update, Delete).
         /// Si la tabla no existe, EF Core intentará crearla con este nombre al ejecutar las migraciones.
         /// </remarks>
+
+        /// <summary>
+        /// Tabla principal de Productos (Padres).
+        /// </summary>
         public DbSet<Product> Products { get; set; }
+
+        /// <summary>
+        /// Tabla de Variantes (Hijos/SKUs). Aquí se guarda el stock real por talle y color.
+        /// </summary>
+        public DbSet<ProductVariant> ProductVariants { get; set; }
 
         /// <summary>
         /// Constructor que configura el contexto mediante Inyección de Dependencias.
@@ -31,6 +37,38 @@ namespace ProductMicroservice.Models
         {
             // Se llama al constructor base (base(options)) para pasarle la configuración a EF Core.
             // El cuerpo del constructor se deja vacío porque no necesitamos inicialización extra por ahora.
+        }
+
+        /// <summary>
+        /// Configuración avanzada del modelo al crear la base de datos.
+        /// Aquí definimos cómo se guardan los Enums.
+        /// </summary>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Product>()
+                .Property(p => p.Type)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<ProductVariant>()
+                .Property(v => v.Color)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<ProductVariant>()
+                .Property(v => v.Size)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<ProductVariant>()
+                .Property(v => v.Fabric)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<ProductVariant>()
+                .Property(v => v.NeckType)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<ProductVariant>()
+                .Property(v => v.Fit)
+                .HasConversion<string>();
         }
     }
 }
